@@ -69,7 +69,7 @@ cp .env.example .env
 docker compose --env-file .env up --build -d
 ```
 
-> **Windows Kullanıcıları İçin Not:** Docker Desktop yeni kurulduysa ve PowerShell `docker` komutunu tanımıyorsa, yeni bir terminal açın. Gerekirse `docs/DOCKER_WINDOWS_NOTLARI.md` dosyasındaki yapılandırma notlarını inceleyebilirsiniz.
+> **Windows Kullanıcıları İçin Not:** Docker Desktop yeni kurulduysa ve PowerShell `docker` komutunu tanımıyorsa, yeni bir terminal açarak devam edin.
 > Eski veritabanı verilerini temizleyip sıfırdan kurulum yapmak isterseniz: `docker compose down -v` ardından tekrar `up` komutunu kullanabilirsiniz.
 
 3. Sistem ayağa kalktığında aşağıdaki adreslerden servislere erişebilirsiniz:

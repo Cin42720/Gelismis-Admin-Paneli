@@ -1,27 +1,27 @@
-# MySQL Baglanti Bilgisi
+# MySQL Bağlantı Bilgisi
 
-Docker Compose ile calistirildiginda HeidiSQL, DBeaver veya benzeri araclarda su bilgilerle baglanabilirsin:
+Docker Compose ile servisler çalıştırıldığında HeidiSQL, DBeaver veya benzeri bir veritabanı yönetim aracı ile aşağıdaki bilgiler üzerinden bağlantı sağlayabilirsiniz:
 
 ```text
 Host/IP: 127.0.0.1
 Port: 3306
-Veritabani: admin_panel
-Kullanici: root
-Sifre: root123
+Veritabanı: admin_panel
+Kullanıcı: root
+Şifre: root123
 ```
 
-Uygulama kullanicisi:
+Uygulama kullanıcısı:
 
 ```text
-Kullanici: admin
-Sifre: admin123
+Kullanıcı: admin
+Şifre: admin123
 ```
 
-HeidiSQL ayari:
+### HeidiSQL Örnek Ayarları:
 
-- Ag turu: `MariaDB or MySQL (TCP/IP)`
-- Library: `libmariadb.dll`
+- Ağ Türü: `MariaDB or MySQL (TCP/IP)`
+- Kütüphane: `libmariadb.dll`
 - Hostname/IP: `127.0.0.1`
-- User: `root`
-- Password: `root123`
+- Kullanıcı: `root`
+- Şifre: `root123`
 - Port: `3306`

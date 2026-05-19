@@ -1,29 +1,31 @@
-# Mimari Ozet
+# Mimari Özet
 
-## Akis
+## Akış
 
-1. Kullanici React admin panelinden istek gonderir.
+1. Kullanıcı React admin panelinden istek gönderir.
 2. FastAPI backend, grup ve ekran yetkisini kontrol eder.
-3. CRUD/dosya/AI islemi icin MySQL'e veri yazar veya AI servise istek acar.
-4. Backend her kritik islem icin RabbitMQ'ya RPC mesaji yollar.
-5. Worker mesaji isler, sonucu cevap kuyruguna doner ve log kaydi olusturur.
-6. Supervisor log ekranindan tum islemleri izler.
+3. CRUD/dosya/AI işlemi için MySQL'e veri yazar veya AI servise istek açar.
+4. Backend her kritik işlem için RabbitMQ'ya RPC mesajı yollar.
+5. Worker mesajı işler, sonucu cevap kuyruğuna döner ve log kaydı oluşturur.
+6. Süpervizör log ekranından tüm işlemleri izler.
 
-## Veri Modeli Yaklasimi
+## Veri Modeli Yaklaşımı
 
-Odev maddesine uygun olarak temel kolonlar sabit, degisebilecek bilgiler `value JSON` alaninda tutulur.
+Sistemin dinamik yapısına uygun olarak temel kolonlar sabit tutulmuş, değişebilecek veya genişletilebilecek bilgiler `value (JSON)` alanında esnek bir biçimde tasarlanmıştır.
 
-Ornek:
+Örnek:
 
 ```sql
-id INT AUTO_INCREMENT PRIMARY KEY,
+id CHAR(36) PRIMARY KEY,
 created_at TIMESTAMP,
 value JSON
 ```
 
-Bu sayede ogrenci, okul ve isletme icin farkli alanlar ayni tabloda esnek bicimde saklanabilir.
+Bu sayede öğrenci, okul ve işletme için farklı alanlar aynı tabloda şemasız bir biçimde (schemaless) saklanabilir.
 
-## RabbitMQ RPC Mesaj Formati
+## RabbitMQ RPC Mesaj Formatı
+
+Örnek bir RPC istek mesajı:
 
 ```json
 {
@@ -37,18 +39,18 @@ Bu sayede ogrenci, okul ve isletme icin farkli alanlar ayni tabloda esnek bicimd
 }
 ```
 
-Worker cevabi:
+Worker cevabı (Reply-To kuyruğuna döner):
 
 ```json
 {
   "ok": true,
-  "message": "Islem basariyla islendi"
+  "message": "İşlem başarıyla işlendi"
 }
 ```
 
-## AI Servis Kapsami
+## AI Servis Kapsamı
 
-- `txt`: Prompt komutlarini ayiklar ve isleme hazir hale getirir.
-- `doc/docx`: HTML donusumu icin pipeline noktasi saglar.
-- `pdf`: Metin cikarma ve ozetleme icin genisletilir.
-- RAG/MCP: Bu iskelette endpoint ve servis ayrimi hazirdir; gercek model entegrasyonu son asamada eklenir.
+- `txt`: Prompt komutlarını ayıklar ve işleme hazır hale getirir.
+- `doc/docx`: HTML dönüşümü için pipeline noktası sağlar.
+- `pdf`: Metin çıkarma ve özetleme için genişletilebilir altyapı.
+- RAG/MCP: Bu iskelette endpoint ve servis ayrımı hazırdır; model entegrasyonu için doğrudan bağlanabilir yapıdadır.

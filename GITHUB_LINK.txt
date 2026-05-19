@@ -1,31 +1,31 @@
 ========================================
-  Internet Programciligi Final Projesi
+  İnternet Programcılığı Final Projesi
 ========================================
 
 GitHub Proje Linki:
 https://github.com/Cin42720/Geli-mi-Admin-Paneli-
 
 ----------------------------------------
-Proje Aciklamasi
+Proje Açıklaması
 ----------------------------------------
 
-Docker tabanli, cok gruplu (supervisor, ogrenci, okul, isletme) bir admin paneli projesidir.
-Supervisor tum gruplarin ekranlarini ve CRUD yetkilerini atayip cikarabilir.
-Her grubun erisebilecegi ekranlar ve islem izinleri (olusturma, okuma, guncelleme, silme)
-dinamik olarak yonetilir.
+Docker tabanlı, çok gruplu (süpervizör, öğrenci, okul, işletme) bir admin paneli projesidir.
+Süpervizör tüm grupların ekranlarını ve CRUD yetkilerini atayıp çıkarabilir.
+Her grubun erişebileceği ekranlar ve işlem izinleri (oluşturma, okuma, güncelleme, silme)
+dinamik olarak yönetilir.
 
 ----------------------------------------
-Kullanilan Teknolojiler
+Kullanılan Teknolojiler
 ----------------------------------------
 
-- Frontend  : React + Vite + TailwindCSS
-- Backend   : FastAPI (Python) - Microservice mimarisi
-- AI Servis : FastAPI tabanli ayri microservice (RAG / MCP destegi)
-- Worker    : RabbitMQ RPC consumer (Python)
-- Veritabani: MySQL 8.4 (JSON veri modeli, Trigger, Function, Procedure)
-- Cache     : Redis
-- Mesajlasma: RabbitMQ (RPC cevap kuyrugu mantigi)
-- Ortam     : Docker Compose (7 container)
+- Frontend   : React + Vite + TailwindCSS
+- Backend    : FastAPI (Python) — Microservice mimarisi
+- AI Servis  : FastAPI tabanlı ayrı microservice (RAG / MCP desteği)
+- Worker     : RabbitMQ RPC consumer (Python)
+- Veritabanı : MySQL 8.4 (JSON veri modeli, Trigger, Function, Procedure)
+- Önbellek   : Redis
+- Mesajlaşma : RabbitMQ (RPC cevap kuyruğu mantığı)
+- Ortam      : Docker Compose (7 container)
 
 ----------------------------------------
 Servis Adresleri (Docker)
@@ -38,16 +38,16 @@ Servis Adresleri (Docker)
 - MySQL             : localhost:3306
 
 ----------------------------------------
-Demo Giris Bilgileri
+Demo Giriş Bilgileri
 ----------------------------------------
 
-Supervisor : supervisor@example.com / 123456
-Ogrenci    : ogrenci@example.com    / 123456
+Süpervizör : supervisor@example.com / 123456
+Öğrenci    : ogrenci@example.com    / 123456
 Okul       : okul@example.com       / 123456
-Isletme    : isletme@example.com    / 123456
+İşletme    : isletme@example.com    / 123456
 
 ----------------------------------------
-MySQL Baglanti Bilgisi
+MySQL Bağlantı Bilgisi
 ----------------------------------------
 
 Host     : 127.0.0.1
@@ -57,16 +57,16 @@ Root     : root / root123
 Uygulama : admin / admin123
 
 ----------------------------------------
-Onemli Ozellikler
+Önemli Özellikler
 ----------------------------------------
 
-1. Uc farkli grup girisi (ogrenci, okul, isletme) + Supervisor yonetimi
-2. Supervisor ekran ve CRUD yetki atama / cikarma
-3. Dosya yukleme kisitlamasi (txt, png, jpg, jpeg, pdf, doc, docx, xls, xlsx)
-4. MySQL JSON veri modeli (id, date, value JSON)
-5. Veritabaninda 12 Trigger + 1 Function + 2 Procedure
-6. RabbitMQ RPC consumer - islem sonuclari subscriber'lara bildirilir
-7. Tum islemler loglanir (DB trigger + RPC loglama)
-8. Yapay zeka destegi (dosya analizi, format donusumu, RAG/MCP)
-9. Tum servisler Docker Compose ile ayaga kalkar
-10. Ornek veritabani ve demo kullanicilar hazir gelir
+1.  Üç farklı grup girişi (öğrenci, okul, işletme) + Süpervizör yönetimi
+2.  Süpervizör ekran ve CRUD yetki atama / çıkarma
+3.  Dosya yükleme kısıtlaması (txt, png, jpg, jpeg, pdf, doc, docx, xls, xlsx)
+4.  MySQL JSON veri modeli (id, date, value JSON)
+5.  Veritabanında 12 Trigger + 1 Function + 2 Procedure
+6.  RabbitMQ RPC consumer — işlem sonuçları subscriber'lara bildirilir
+7.  Tüm işlemler loglanır (DB trigger + RPC loglama)
+8.  Yapay zekâ desteği (dosya analizi, format dönüşümü, RAG/MCP)
+9.  Tüm servisler Docker Compose ile ayağa kalkar
+10. Örnek veritabanı ve demo kullanıcılar hazır gelir

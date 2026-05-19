@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+dist/
+build/
+.vite/
+uploads/*
+!uploads/.gitkeep
+!uploads/sample-panel.png
+logs/*
+!logs/.gitkeep
+mysql_data/

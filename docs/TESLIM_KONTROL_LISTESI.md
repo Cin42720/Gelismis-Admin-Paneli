@@ -1,0 +1,21 @@
+# Teslim Kontrol Listesi
+
+- [ ] Proje GitHub'a yuklendi.
+- [ ] `GITHUB_LINK.txt` dosyasina repo linki yazildi.
+- [ ] `GITHUB_LINK.txt` icindeki placeholder link gercek GitHub repo linkiyle degistirildi.
+- [ ] Docker Compose sifirdan calisiyor.
+- [ ] Frontend `http://localhost:3001` adresinde aciliyor.
+- [ ] Backend Swagger `http://localhost:8000/docs` adresinde aciliyor.
+- [ ] RabbitMQ paneli `http://localhost:15672` adresinde aciliyor.
+- [ ] MySQL ornek verileri yukleniyor.
+- [ ] `db/sample_database.sql` dosyasi teslim klasorunde bulunuyor.
+- [ ] Ornek image dosyasi `uploads/sample-panel.png` olarak teslim klasorunde bulunuyor.
+- [ ] README icinde MySQL kullanici/sifre ve demo giris bilgileri bulunuyor.
+- [ ] Trigger/function/procedure SQL dosyasinda mevcut.
+- [ ] Supervisor grup-ekran yetkisi atayabiliyor.
+- [ ] CRUD izinleri grup bazli gosteriliyor.
+- [ ] Dosya uzantisi kisitlari uygulanabiliyor.
+- [ ] RabbitMQ worker log uretiyor.
+- [ ] AI servis demo endpointi calisiyor.
+- [ ] Frontend demo login ekrani aciliyor.
+- [ ] README kurulum ve test adimlarini iceriyor.

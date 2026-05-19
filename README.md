@@ -109,7 +109,6 @@ Veritabanının tam ve manuel bir yedeği, referans amacıyla `db/sample_databas
 - **Asenkron İşlemler:** RabbitMQ RPC altyapısıyla arka planda çalışan Worker servisi ve asenkron loglama.
 - **Yapay Zeka Hazırlığı:** Dosya analizi ve dönüştürme işlemleri yapabilen, RAG/MCP yeteneklerine hazır ayrı bir AI mikroservisi.
 
-## GitHub Bağlantısı
+## Lisans
 
-Proje kaynak kodlarına aşağıdaki adresten ulaşabilirsiniz:
-[Cin42720/Gelismis-Admin-Paneli](https://github.com/Cin42720/Gelismis-Admin-Paneli)
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır. Dilediğiniz gibi kullanabilir, değiştirebilir ve dağıtabilirsiniz. Daha fazla detay için `LICENSE` dosyasına göz atabilirsiniz.

@@ -1,3 +1,72 @@
-GitHub proje linki:
+========================================
+  Internet Programciligi Final Projesi
+========================================
+
+GitHub Proje Linki:
 https://github.com/Cin42720/Geli-mi-Admin-Paneli-
 
+----------------------------------------
+Proje Aciklamasi
+----------------------------------------
+
+Docker tabanli, cok gruplu (supervisor, ogrenci, okul, isletme) bir admin paneli projesidir.
+Supervisor tum gruplarin ekranlarini ve CRUD yetkilerini atayip cikarabilir.
+Her grubun erisebilecegi ekranlar ve islem izinleri (olusturma, okuma, guncelleme, silme)
+dinamik olarak yonetilir.
+
+----------------------------------------
+Kullanilan Teknolojiler
+----------------------------------------
+
+- Frontend  : React + Vite + TailwindCSS
+- Backend   : FastAPI (Python) - Microservice mimarisi
+- AI Servis : FastAPI tabanli ayri microservice (RAG / MCP destegi)
+- Worker    : RabbitMQ RPC consumer (Python)
+- Veritabani: MySQL 8.4 (JSON veri modeli, Trigger, Function, Procedure)
+- Cache     : Redis
+- Mesajlasma: RabbitMQ (RPC cevap kuyrugu mantigi)
+- Ortam     : Docker Compose (7 container)
+
+----------------------------------------
+Servis Adresleri (Docker)
+----------------------------------------
+
+- Frontend Panel    : http://localhost:3001
+- Backend Swagger   : http://localhost:8000/docs
+- AI Servis Swagger : http://localhost:8100/docs
+- RabbitMQ Paneli   : http://localhost:15672 (guest / guest)
+- MySQL             : localhost:3306
+
+----------------------------------------
+Demo Giris Bilgileri
+----------------------------------------
+
+Supervisor : supervisor@example.com / 123456
+Ogrenci    : ogrenci@example.com    / 123456
+Okul       : okul@example.com       / 123456
+Isletme    : isletme@example.com    / 123456
+
+----------------------------------------
+MySQL Baglanti Bilgisi
+----------------------------------------
+
+Host     : 127.0.0.1
+Port     : 3306
+Database : admin_panel
+Root     : root / root123
+Uygulama : admin / admin123
+
+----------------------------------------
+Onemli Ozellikler
+----------------------------------------
+
+1. Uc farkli grup girisi (ogrenci, okul, isletme) + Supervisor yonetimi
+2. Supervisor ekran ve CRUD yetki atama / cikarma
+3. Dosya yukleme kisitlamasi (txt, png, jpg, jpeg, pdf, doc, docx, xls, xlsx)
+4. MySQL JSON veri modeli (id, date, value JSON)
+5. Veritabaninda 12 Trigger + 1 Function + 2 Procedure
+6. RabbitMQ RPC consumer - islem sonuclari subscriber'lara bildirilir
+7. Tum islemler loglanir (DB trigger + RPC loglama)
+8. Yapay zeka destegi (dosya analizi, format donusumu, RAG/MCP)
+9. Tum servisler Docker Compose ile ayaga kalkar
+10. Ornek veritabani ve demo kullanicilar hazir gelir
